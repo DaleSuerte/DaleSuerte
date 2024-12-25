@@ -29,7 +29,7 @@ function verificarAutenticacion() {
 function generarMandalas() {
     mandalas = Array.from({ length: 250 }, (_, i) => ({
         id: i + 1,
-        img: `mandalas/mandala${i + 1}.png`,
+        img: `mandala${i + 1}.png`,
         disponible: true,
         compradoEnTurno: false
     }));
