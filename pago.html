@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proceso de Pago</title>
+  <!-- Vinculamos la misma hoja de estilos (opcional) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="DaleSuerte2 completo3.png" alt="Dale Suerte Logo">
+    </div>
+  </header>
+
+  <main>
+    <section id="pago">
+      <h1>Proceso de Pago</h1>
+
+      <!-- Aquí podrías mostrar un resumen de lo que está en el carrito 
+           si así lo deseas (usando localStorage o tu propia lógica).
+           Por ejemplo, podrías leer los datos del carrito guardados en
+           localStorage y mostrarlos en esta página.
+      -->
+
+      <form id="form-pago">
+        <p>Por favor, ingresa tu correo electrónico para enviarte tus mándalas y tu recibo.</p>
+
+        <label for="email-pago">Correo Electrónico:</label>
+        <input 
+          type="email"
+          id="email-pago"
+          name="email-pago"
+          placeholder="tunombre@ejemplo.com"
+          required
+        >
+
+        <h2>Métodos de Pago</h2>
+        <div class="metodos-pago">
+          <!-- Botón Visa -->
+          <button type="button" id="visa-btn" class="btn-metodo-pago">
+            <img src="visa.png" alt="Visa" style="max-height: 30px; margin-right: 8px;">
+            Pagar con Visa
+          </button>
+
+          <!-- Botón Yape -->
+          <button type="button" id="yape-btn" class="btn-metodo-pago">
+            <img src="yape.png" alt="Yape" style="max-height: 30px; margin-right: 8px;">
+            Pagar con Yape
+          </button>
+        </div>
+
+        <p>
+          Al dar clic en uno de los métodos de pago, serás redirigido a la pasarela correspondiente.
+        </p>
+        
+        <!-- Botón Finalizar (opcional) -->
+        <button type="submit" style="margin-top: 20px;">Finalizar Pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Dale Suerte. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // EJEMPLO: Manejando los botones de pago
+    document.getElementById('visa-btn').addEventListener('click', function() {
+      // Aquí colocarías tu lógica o redirección a la pasarela Visa
+      alert('Redirigiendo a la pasarela de pago Visa...');
+      // window.location.href = 'https://pasarela-visa.com/ejemplo'; // URL real de pasarela
+    });
+
+    document.getElementById('yape-btn').addEventListener('click', function() {
+      // Aquí colocarías tu lógica o redirección a la pasarela de Yape
+      alert('Redirigiendo a la pasarela de pago Yape...');
+      // window.location.href = 'https://www.yape.com.pe'; // URL real de pasarela
+    });
+
+    // Manejando el envío del formulario (correo)
+    document.getElementById('form-pago').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const emailCliente = document.getElementById('email-pago').value;
+      alert(`Gracias, se enviará una confirmación a: ${emailCliente}`);
+      // Aquí podrías hacer lógica adicional para tu backend, etc.
+      // Por ejemplo, redirigir a una página de confirmación
+      // window.location.href = 'confirmacion.html';
+    });
+  </script>
+</body>
+</html>

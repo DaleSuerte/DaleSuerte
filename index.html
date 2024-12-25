@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dale Suerte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="DaleSuerte2 completo3.png" alt="Dale Suerte Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+         <!-- Sección NUEVA del video -->
+        <section id="video-intro">
+            <video 
+                src="MandalaSuerte.mp4" 
+                autoplay 
+                loop 
+                muted 
+                playsinline 
+                class="video-intro">
+            </video>
+        </section>
+        <!-- Fin Sección NUEVA -->
+
+	<section id="intro">
+            <h1>Bienvenido a MandaLaSuerte</h1>
+            <p>
+                Compra mándalas únicas y mágicas diseñadas para conectarte con tu esencia. ¡Empieza hoy!
+            </p>
+            <p>
+                Agréganos a nuestro canal de WhatsApp "Dale Suerte Oficial" para más información de ofertas
+                y premios sorpresa por la compra de tu mandala favorita.
+            </p>
+        </section>
+
+        <section id="galeria">
+            <h2>Galería de Mándalas</h2>
+            <p id="horario-mensaje"></p>
+
+            <!-- Contenedor donde se muestran las mándalas dinámicamente -->
+            <div class="mandalas-grid">
+                <!-- Las mándalas se generan dinámicamente -->
+            </div>
+
+            <!-- Controles de paginación -->
+            <div class="paginacion">
+                <button id="prev-page" class="page-btn">Anterior</button>
+                <span id="pagina-actual">1</span> / <span id="total-paginas">1</span>
+                <button id="next-page" class="page-btn">Siguiente</button>
+            </div>
+        </section>
+
+        <section id="carrito">
+            <h2>Carrito de Compras</h2>
+            <div class="carrito-container">
+                <div id="carrito-items">
+                    <p>Tu carrito está vacío.</p>
+                </div>
+                <div class="carrito-resumen">
+                    <h3>Resumen</h3>
+                    <p><strong>Total:</strong> <span id="carrito-total">0.00</span> soles</p>
+                    <button id="comprar-btn">Proceder al Pago</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contáctanos</h2>
+            <form id="formulario-contacto">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dale Suerte. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
